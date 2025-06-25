@@ -36,7 +36,7 @@ and I removed unnecessary stuff, which provided me a good practice and refresher
     - Decrypt the payload and inject it into that section
 4. Build the executable as Release and upload it to your windows vm
 
-{{< image src="poc.png" alt="poc" position="center" style="border-radius: 6px; margin-top: 20px; margin-bottom: 20px; margin-left: auto; margin-right: auto" >}}
+< image src="poc.png" alt="poc" position="center" style="border-radius: 6px; margin-top: 20px; margin-bottom: 20px; margin-left: auto; margin-right: auto" >
 
 ### Conclusion
 
