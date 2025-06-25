@@ -10,7 +10,7 @@ to just take a working code and just run it, but it's another thing to take the 
 That's why i learned reverse engineering, because you need to be able to understand the inner workings of anything you touch. I think
 that's what make the difference between people in this field!
 
-I guess you already know which one I chose to start with, i chose latter.
+I guess you already know which one I chose to start with, i chose the latter.
 Here's the blog I used as a reference : https://medium.com/@s12deff/bypass-windows-defender-executing-shellcode-using-freeloaderinjector-7deeba8796e2
 In that blog he use the undocumented API : `ntdll.dll`. I didn't want to just copy and paste it, so i adapted is code to use it with the documented API
 and I removed unnecessary stuff, which provided me a good practice and refresher.
