@@ -41,5 +41,5 @@ and I removed unnecessary stuff, which provided me a good practice and refresher
 ### Conclusion
 
 I think, that next i want to either try a dll sideloading and then move on to using Loki with electron apps that also uses dll sideloading attacks,
-there's a good write-up on it, if you want to take a head start!
+there's a good write-up on it [here](https://www.ibm.com/think/x-force/bypassing-windows-defender-application-control-loki-c2), if you want to take a head start!
 
