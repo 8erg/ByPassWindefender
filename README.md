@@ -30,7 +30,7 @@ and I removed unnecessary stuff, which provided me a good practice and refresher
 - ChatGPT (for reference of course😆)
 
 
-## 3. Development
+### 3. Development
 ---
 
 1. Enumerating the processes
@@ -38,6 +38,7 @@ and I removed unnecessary stuff, which provided me a good practice and refresher
 3. Once we find it we will decrypt and inject the shellcode inside that memory region and then start a thread starting from that section
 4. We should get a reverse shell connection back to our `Slvier C2` if everything went well (sadly we don't😢)
 ![POC](poc.png)
+
 
 ### Conclusion
 ---
